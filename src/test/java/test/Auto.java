@@ -32,7 +32,7 @@ public class Auto {
 	        }
 		}
 		
-		if (this.registro == this.motor.registro && this.registro == x && f == true){
+		if (this.registro == this.motor.registro && this.registro == this.asientos[0].registro && f == true){
 			return("Auto original");
 		}
 		
