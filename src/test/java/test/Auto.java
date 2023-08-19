@@ -26,23 +26,25 @@ public class Auto {
 	
 	String verificarIntegridad() {
 		
-		int x = this.asientos[0].registro;
-		
+		int x = this.registro;
 		boolean f = false;
 		
-		for (int i = 1; i < asientos.length; i++) {
+		for (int i = 0; i < asientos.length; i++) {
 			
-			if (x == this.asientos[i].registro) {
-				f = true;
+			if (this.asientos[i] instanceof Asiento) {
+				
+				if (this.asientos[i].registro == x) {
+					f = true;
+				}
+				
+				else {
+					f = false;
+					break;
+				}
 			}
-			
-			else {
-				f = false;
-				break;
-	        }
 		}
 		
-		if (this.registro == this.motor.registro && this.registro == this.asientos[0].registro && f == true){
+		if (x == this.motor.registro && f == true) {
 			return "Auto original";
 		}
 		
