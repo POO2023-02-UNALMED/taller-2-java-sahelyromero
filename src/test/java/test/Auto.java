@@ -20,7 +20,7 @@ public class Auto {
 		
 		boolean f = false;
 		
-		for (int i = 0; i < asientos.length; i++) {
+		for (int i = 1; i < asientos.length; i++) {
 			
 			if (x == this.asientos[i].registro) {
 				f = true;
